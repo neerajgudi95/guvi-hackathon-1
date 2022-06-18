@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ddd;
+    min-width: 368px;
+}
+
+.header {
+    text-align: center;
+    padding: 50px;
+    min-width: 400px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    /* background:  */
+    background: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 0.4) 0%, rgba(4, 68, 159, 1) 50%, rgba(10, 7, 69, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    margin: 20px 0;
+    opacity: 0.4;
+    font-weight: 700;
+}
+
+.name-input {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.name-input input {
+    flex: 0.9;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-family: inherit;
+}
+
+.name-input button {
+    flex: 0.1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #0077ff;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.predict-nationality {
+    padding: 0 50px;
+}
+
+.enteredData {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    text-align: center;
+}
+
+.data-table {
+    width: 100%;
+    min-width: 100%;
+}
+
+.data-table th,
+td {
+    padding: 5px 10px;
+}
+
+.country-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    flex: 1;
+}
+
+.country-data img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.error-output {
+    display: none;
+    background-color: rgb(255, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    height: 40px;
+    transition: 0.7s ease-in-out;
+}
+
+.error-output p {
+    color: rgb(255, 0, 0, 0.8);
+}
+
+p>span {
+    font-weight: 700;
+}
+
+.show {
+    display: flex;
+}

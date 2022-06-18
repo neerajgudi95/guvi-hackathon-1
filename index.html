@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationality - predictor</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>PREDICT NATIONALITY</h1>
+        <p>Enter name to predict its nationality</p>
+        <div class="name-input">
+            <input type="text" name="nameInput" id="nameInput" placeholder="enter name">
+            <button id="predictBtn">Predict</button>
+        </div>
+    </div>
+    <div class="predict-nationality">
+        <div class="enteredData">
+            <p id="enteredName"></p>
+            <p id="noOfCtrys"></p>
+        </div>
+        <div class="error-output">
+            <p>No Nationality predicitons found for <span id="error-output"></span>, please try another name</p>
+        </div>
+        <div class="table-container">
+            <table class="data-table" id="data-table"></table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
