@@ -14,13 +14,6 @@ const tableDiv = document.querySelector(".table-container");
 const thead = document.createElement("thead");
 const tbody = document.createElement("tbody");
 
-//adding column headings into thead
-thead.innerHTML = `<tr>
-<th>SNo.</th>
-<th>Nationality</th>
-<th>Probability</th>
-</tr>`;
-
 //Function to reset elements for every search
 const resetElements = () => {
   enteredName.innerHTML = "";
@@ -82,7 +75,12 @@ const predictNationality = async (nameInput) => {
           }
         }
       }
-
+      //adding column headings into thead
+      thead.innerHTML = `<tr>
+                        <th>SNo.</th>
+                        <th>Nationality</th>
+                        <th>Probability</th>
+                        </tr>`;
       tbody.innerHTML = tableRows;
       dataTable.appendChild(thead);
       dataTable.appendChild(tbody);
@@ -104,6 +102,7 @@ predictBtn.addEventListener("click", () => {
     error.style.display = "block";
     error.innerHTML =
       "<p>Please enter any name to predict, input cannot be blank</p>";
+    resetElements();
   }
   nameInput.value = "";
 });
