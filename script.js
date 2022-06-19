@@ -1,10 +1,10 @@
 const baseURL = "https://api.nationalize.io/";
 const baseRestCountryiesURL = "https://restcountries.com/v3.1/alpha";
+
 const nameInput = document.getElementById("nameInput");
 const dataTable = document.getElementById("data-table");
 const enteredName = document.getElementById("enteredName");
 const noOfCtrys = document.getElementById("noOfCtrys");
-const errorOutput = document.getElementById("error-output");
 const predictBtn = document.getElementById("predictBtn");
 
 const error = document.querySelector(".error-output");
@@ -88,13 +88,25 @@ const predictNationality = async (nameInput) => {
       dataTable.appendChild(tbody);
     } else {
       error.style.display = "block";
-      errorOutput.innerText = nameInput;
+      error.innerHTML = `<p>No Nationality predicitons found, please try another name</p>`;
     }
   } catch (error) {
-    console.log(error.message);
+    error.style.display = "block";
+    error.innerHTML = `<p>${error.message}</p>`;
+    // console.log(error.message);
   }
 };
 predictBtn.addEventListener("click", () => {
-  predictNationality(nameInput.value);
+  if (nameInput.value.length > 0) {
+    error.style.display = "none";
+    predictNationality(nameInput.value.toLowerCase());
+  } else {
+    error.style.display = "block";
+    error.innerHTML =
+      "<p>Please enter any name to predict, input cannot be blank</p>";
+  }
   nameInput.value = "";
 });
+
+// name-nationality-prediction.netlify.app
+// https://github.com/neerajgudi95/guvi-hackathon-1
